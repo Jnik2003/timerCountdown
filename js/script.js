@@ -1,15 +1,18 @@
 window.addEventListener('DOMContentLoaded', function(event) {
 
-    const deadline = '2022-01-01';
+    const deadline = '2022-01-01T00:00+03:00';
+    const deadline1 = '2022-02-14T00:00+03:00';
+
+    console.log(Date.parse(new Date().toLocaleString("ru-Ru")));
    
     //функция которая определяет разницу между дедлайном и текущим временем
     function getTimeRemaining(endtime) {
-
+    	// let t = new Date(endtime) - new Date()
         const t = Date.parse(endtime) - Date.parse(new Date()); //конечное время в мс - текущую дату. 
         
         // Теперь эту разницу переведем в дни часы минуты и секунды
-        let days = Math.floor(t / (1000 * 60 * 60 * 24)); // получили дни
-        let hours = Math.floor((t / 1000 * 60 * 60) % 24); // получили часы 
+        let days = Math.floor(t / (1000 * 60 * 60 * 24)); // получили дни        
+        let hours = Math.floor((t / (1000 * 60 * 60) % 24)); // получили часы 
         let minutes = Math.floor((t / 1000 / 60) % 60); // минуты
         let seconds = Math.floor((t / 1000) % 60); // секунды
 
@@ -58,7 +61,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
         }
     }
     setTime('.timer', deadline)
-    setTime('.timer1', deadline)
+    setTime('.timer1', deadline1)
 
 
 })
