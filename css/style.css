@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,14 +12,19 @@ html, body {
 }
 
 .title {
-  font-size: 54px;
-  margin-bottom: 40px;
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
-.timer {
+.timer,
+.timer1 {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
+  align-items: center;
+  background-color: #A4FFAD;
+  height: 300px;
 }
 
 .timer__block {
@@ -30,8 +36,10 @@ html, body {
   justify-content: center;
   align-items: center;
   font-size: 22px;
-  background-color: #CEC909;
+  font-weight: thin;
+  background-color: whitesmoke;
 }
 .timer__block span {
   font-size: 42px;
+  font-weight: bold;
 }
